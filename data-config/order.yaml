@@ -1,0 +1,11 @@
+apiName: Store
+apiPath: /store/order
+groupingKey: id
+
+data:
+  - pet: firulais
+    id: 14
+    quantity: 3
+    shipDate: '2021-08-25T16:43:48.543Z'
+    status: placed
+    complete: true

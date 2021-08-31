@@ -1,0 +1,23 @@
+apiName: Pet
+apiPath: /pet
+groupingKey: name
+
+data:
+  - category:
+      name: perro
+    id: 12
+    name: firulais
+    photoUrls: 
+      - "http://photo.com/firulais.jpg"
+    tags:
+      - name: criollo
+    status: available
+  - category:
+      name: gato
+    id: 13
+    name: snowball
+    photoUrls:
+      - "http://photo.com/snowball.jpg"
+    tags:
+      - name: criollo
+    status: available
