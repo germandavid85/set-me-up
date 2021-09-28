@@ -5,9 +5,7 @@ describe('demo test', () => {
   let petApi;
   beforeAll(() => {
     const apiClient = SwaggerPetStore.ApiClient.instance;
-  
     apiClient.basePath = 'https://petstore3.swagger.io/api/v3';
-
     petApi = new SwaggerPetStore.PetApi(apiClient);
   });
 
@@ -16,12 +14,7 @@ describe('demo test', () => {
 
     beforeAll(async () => {
       const getPet = (callback) => petApi.getPetById(loadedData.pet.firulais.id, callback);
-
-      try {
-        getResponse = await retry(getPet);
-      } catch(e) {
-        console.log(e);
-      }
+      getResponse = await retry(getPet);
     });
 
     it('and the pet should not exist', () => {

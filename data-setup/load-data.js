@@ -88,8 +88,8 @@ async function loadData() {
     allData[apiName.toLowerCase()] = {};
     for (let j = 0; j < data.length; j++) {
       const currentData = data[j];
-      const apiCallFn = (callback) => modelApi[createAction](currentData, callback);
-      addRefValues(sortedFiles[i].refs, currentData);
+      const currentDataWithRefs = addRefValues(sortedFiles[i].refs, currentData);
+      const apiCallFn = (callback) => modelApi[createAction](currentDataWithRefs, callback);
   
       const response = await promisify(apiCallFn);
   
